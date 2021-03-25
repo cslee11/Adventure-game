@@ -12,23 +12,27 @@
         <h1>Another Zombie Story</h1>
     </header>
     <div class="container">
-            <div class= "story">
-                <h2>Back story...</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, accusantium. Pariatur nemo molestias voluptas delectus, ipsa aliquid sint accusamus repellendus debitis libero veritatis quas, aliquam ipsum illum alias repudiandae eligendi asperiores amet consequatur. Commodi cumque, amet quo sapiente doloribus illum, officiis maiores, fuga aperiam deleniti nisi porro distinctio cupiditate optio!</p>
-            </div>
-            <div class="characters">
-                <h2>Characters Type</h2>
-                <p>
-                    Thug, Ex-Military, Professor, Couch Potatoe
-                </p>
-            </div>
+        <div class= "story">
+            <h2>Back Story...</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, accusantium. Pariatur nemo molestias voluptas delectus, ipsa aliquid sint accusamus repellendus debitis libero veritatis quas, aliquam ipsum illum alias repudiandae eligendi asperiores amet consequatur. Commodi cumque, amet quo sapiente doloribus illum, officiis maiores, fuga aperiam deleniti nisi porro distinctio cupiditate optio!</p>
+        </div>
+        <div class="characters">
+            <h2>Character Type</h2>
+            <p>
+                Thug, Ex-Military, Professor, Couch Potatoe
+            </p>
+        </div>
         <div class="buttons">
-            <button onclick="promptCharater()">Select your Character Type</button>
+            <button onclick="promptCharacter()">Select your Character Type</button>
             <p id="demo"></p>
-
+            <br>
+          
+            <button onclick="promptStats()">Assign your stats.</button>
+           
+            <br>
             <button onclick="promptFunction()">What is your name, stranger?</button>
             <br>
-            <br>
+  
             <button onclick="promptWeapon()">Start</button>
         </div>
     </div>
@@ -40,16 +44,29 @@
 <script>
 
 // 
-function promptCharater() {
+function promptCharacter() {
   var txt;
-  var person = prompt("Select your Character Type:", "Stranger");
+  var person = prompt("Select your Character Type:", "Choose wisely");
   if (person == null || person == "") {
     txt = "User cancelled the prompt.";
   } else {
     txt = "Hello " + person + "! Sadly, ultimately your skills don't mean shit.";
   }
-  document.getElementById("demo").innerHTML = txt;
+  document.getElementById("demo").innerHTML = txt;   // sourced from w3 school
 }
+
+function promptStats(){
+    let stats = [];
+    for(var i = 0; i < 5; i++) {
+    stats.push(prompt('Assign Strength (1-10):'));
+    stats.push(prompt('Assign Intellect (1-10):'));
+    stats.push(prompt('Assign Craftiness (1-10):'));
+    stats.push(prompt('Assign Endurance (1-10):'));
+    stats.push(prompt('Assign Luck (1-10):'));
+    break;
+    }
+}
+
 
 function promptFunction() {
     let myName = prompt("What is your name?")
@@ -68,6 +85,9 @@ function promptFunction() {
         }
     }
 };
+
+
+
 
                             // Select weapon and story begins here
 function promptWeapon() {
