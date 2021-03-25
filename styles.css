@@ -51,10 +51,13 @@ header h1 {
     }
 }
 
-foot {
-    height: 20%;
-}
+
 
 .buttons {
     font-size: 1.5rem;
+}
+
+
+foot {
+    height: 20%;
 }

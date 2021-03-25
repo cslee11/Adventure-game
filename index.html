@@ -26,13 +26,12 @@
             <button onclick="promptCharacter()">Select your Character Type</button>
             <p id="demo"></p>
             <br>
-          
             <button onclick="promptStats()">Assign your stats.</button>
-           
+            <br>
+            <button onclick="promptGeneral()">Assign your General Info.</button>
             <br>
             <button onclick="promptFunction()">What is your name, stranger?</button>
             <br>
-  
             <button onclick="promptWeapon()">Start</button>
         </div>
     </div>
@@ -47,14 +46,27 @@
 function promptCharacter() {
   var txt;
   var person = prompt("Select your Character Type:", "Choose wisely");
-  if (person == null || person == "") {
+  if (person == null || person == "Choose wisely") {
     txt = "User cancelled the prompt.";
   } else {
     txt = "Hello " + person + "! Sadly, ultimately your skills don't mean shit.";
   }
-  document.getElementById("demo").innerHTML = txt;   // sourced from w3 school
+  document.getElementById("demo").innerHTML = txt;   // sourced from w3 school of course haha
 }
 
+
+//Assign General Info
+function promptGeneral(){
+    let general = [];
+    for(var i = 0; i < 3; i++) {
+    general.push(prompt('Assign Gender:'));
+    general.push(prompt('Assign Height'));
+    general.push(prompt('Assign Race'));
+    break;
+    }
+}
+
+// Assign Stats
 function promptStats(){
     let stats = [];
     for(var i = 0; i < 5; i++) {
