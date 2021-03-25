@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Another Zombie Story</title>
 </head>
 <body>
     <header>
@@ -42,12 +42,12 @@
 
 <script>
 
-// 
+
 function promptCharacter() {
   var txt;
   var person = prompt("Select your Character Type:", "Choose wisely");
   if (person == null || person == "Choose wisely") {
-    txt = "User cancelled the prompt.";
+    txt = "Not a valid input try again.";
   } else {
     txt = "Hello " + person + "! Sadly, ultimately your skills don't mean shit.";
   }
@@ -159,8 +159,8 @@ function promptWeapon() {
         }
     } else {
         (weapon === null)
-        let seeya = confirm('Are you quitting?');
-        if (seeya === true) {
+        let abort = confirm('Are you quitting?');
+        if (abort === true) {
             alert('The world needs a Hero!');
         } else {
             alert("It's never too late to start again.");
