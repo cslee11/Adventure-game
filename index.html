@@ -4,26 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-    <div class= "story">
-        <h1>Back story...</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, accusantium. Pariatur nemo molestias voluptas delectus, ipsa aliquid sint accusamus repellendus debitis libero veritatis quas, aliquam ipsum illum alias repudiandae eligendi asperiores amet consequatur. Commodi cumque, amet quo sapiente doloribus illum, officiis maiores, fuga aperiam deleniti nisi porro distinctio cupiditate optio!</p>
+    <header>
+        <h1>Another Zombie Story</h1>
+    </header>
+    <div class="container">
+            <div class= "story">
+                <h2>Back story...</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, accusantium. Pariatur nemo molestias voluptas delectus, ipsa aliquid sint accusamus repellendus debitis libero veritatis quas, aliquam ipsum illum alias repudiandae eligendi asperiores amet consequatur. Commodi cumque, amet quo sapiente doloribus illum, officiis maiores, fuga aperiam deleniti nisi porro distinctio cupiditate optio!</p>
+            </div>
+            <div class="characters">
+                <h2>Characters Type</h2>
+                <p>
+                    Thug, Ex-Military, Professor, Couch Potatoe
+                </p>
+            </div>
+        <div class="buttons">
+            <button onclick="promptCharater()">Select your Character Type</button>
+            <p id="demo"></p>
+
+            <button onclick="promptFunction()">What is your name, stranger?</button>
+            <br>
+            <br>
+            <button onclick="promptWeapon()">Start</button>
+        </div>
     </div>
-    <div class="characters">
-        <h2>Characters Type</h2>
-        <p>
-            Thug, Ex-Military, Professor, Couch Potatoe
-        </p>
-    </div>
 
+    <footer>
 
-    <button onclick="promptCharater()">Select your Character Type</button>
-    <p id="demo"></p>
-
-    <button onclick="promptFunction()">What is your name, stranger?</button>
-    <button onclick="promptWeapon()">Start</button>
+    </footer>
 
 <script>
 
@@ -34,7 +46,7 @@ function promptCharater() {
   if (person == null || person == "") {
     txt = "User cancelled the prompt.";
   } else {
-    txt = "Hello " + person + "! Sadly, ultimately your skills don't mean shit?";
+    txt = "Hello " + person + "! Sadly, ultimately your skills don't mean shit.";
   }
   document.getElementById("demo").innerHTML = txt;
 }
@@ -115,11 +127,11 @@ function promptWeapon() {
         }
     } else {
         (weapon === null)
-        let seeya = confirm('Are you sure?');
+        let seeya = confirm('Are you quitting?');
         if (seeya === true) {
-            alert('I knew you were too scared!');
+            alert('The world needs a Hero!');
         } else {
-            alert('You seem uncertain.');
+            alert("It's never too late to start again.");
         }
     };
 }

@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+
+    background-color: black;
+    
+}
+
+header {
+    margin-bottom: 5%;
+    align-items: center;
+    background-image: url(https://media.gettyimages.com/photos/zombie-apocalypse-survivor-against-hordes-of-undead-picture-id1129020652?s=170667a);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+}
+
+header h1 {
+    padding-top: 10%;
+    text-align: center;
+    color: white;
+    font-size: 5rem
+}
+
+@media (max-width: 800px) {
+    header h1{
+        text-shadow: cornsilk;
+        -webkit-text-stroke:2px black; /* width and color */
+        color: rgb(255, 255, 255);
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 3%;
+    width: 40%;
+    background-color: white;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+    .container{
+        width: 100%;
+        margin: 0;
+ 
+    }
+}
+
+foot {
+    height: 20%;
+}
+
+.buttons {
+    font-size: 1.5rem;
+}
