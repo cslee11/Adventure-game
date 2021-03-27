@@ -9,6 +9,18 @@ function promptCharacter() {
     document.getElementById("demo").innerHTML = txt;   // sourced from w3 school of course haha
   }
   
+   // Assign Stats
+   function promptStats(){
+    let stats = [];
+    for(var i = 0; i < 5; i++) {
+    stats.push(prompt('Assign Strength (1-10):'));
+    stats.push(prompt('Assign Intellect (1-10):'));
+    stats.push(prompt('Assign Craftiness (1-10):'));
+    stats.push(prompt('Assign Endurance (1-10):'));
+    stats.push(prompt('Assign Luck (1-10):'));
+    break;
+    }
+}
   
   //Assign General Info
   function promptGeneral(){
@@ -21,23 +33,10 @@ function promptCharacter() {
       }
   }
   
-  // Assign Stats
-  function promptStats(){
-      let stats = [];
-      for(var i = 0; i < 5; i++) {
-      stats.push(prompt('Assign Strength (1-10):'));
-      stats.push(prompt('Assign Intellect (1-10):'));
-      stats.push(prompt('Assign Craftiness (1-10):'));
-      stats.push(prompt('Assign Endurance (1-10):'));
-      stats.push(prompt('Assign Luck (1-10):'));
-      break;
-      }
-  }
-  
   //What is your name?
   function promptFunction() {
       let myName = prompt("What is your name?")
-      let player = !isNaN(Number(myName));
+    //   let player = !isNaN(Number(myName));
       if (myName === "") {
           alert('You did not enter a name!');
       } else if (myName != null) {
@@ -54,6 +53,22 @@ function promptCharacter() {
   };
   
   
+  function promptPassword( )
+  {
+  
+  var name = prompt ("Enter your Username: ");
+  var pwd = prompt ("Enter your Password: ");
+  
+  while (pwd != 'free'){
+  alert("Login is incorrect");
+  pwd = prompt ("Enter your Password: ");
+  }
+  
+  alert("Password is correct, you are allowed to enter the site");
+  
+  }
+
+
   
   
                               // Select weapon and story begins here
